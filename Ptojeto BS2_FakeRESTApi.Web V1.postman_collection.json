@@ -1,0 +1,2854 @@
+{
+	"info": {
+		"_postman_id": "d9d98dd9-8b69-44c1-b0ef-3c36b89eb3c6",
+		"name": "Ptojeto BS2_FakeRESTApi.Web V1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16492177"
+	},
+	"item": [
+		{
+			"name": "api/v1",
+			"item": [
+				{
+					"name": "Activities",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/v1/Activities/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain; v=1.0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Activities/30",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Activities",
+												"30"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Activities/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Activities",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; v=1.0"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": 59450625,\n    \"title\": \"cupidatat commodo culpa\",\n    \"dueDate\": \"1957-11-02T09:26:13.433Z\",\n    \"completed\": true\n  },\n  {\n    \"id\": -95710969,\n    \"title\": \"incididunt dolore Lorem aute\",\n    \"dueDate\": \"1965-06-01T22:43:54.917Z\",\n    \"completed\": true\n  }\n]"
+										}
+									]
+								},
+								{
+									"name": "/api/v1/Activities/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json; v=1.0"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain; v=1.0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 33103427,\n  \"title\": \"repre\",\n  \"dueDate\": \"2009-05-14T16:32:17.279Z\",\n  \"completed\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Activities/30",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Activities",
+												"30"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 33103427,\n  \"title\": \"repre\",\n  \"dueDate\": \"2009-05-14T16:32:17.279Z\",\n  \"completed\": true\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Activities/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Activities",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; v=1.0"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 33103427,\n  \"title\": \"repre\",\n  \"dueDate\": \"2009-05-14T16:32:17.279Z\",\n  \"completed\": true\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/v1/Activities/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Activities/30",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Activities",
+												"30"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Activities/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Activities",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Activities",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Activities",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Activities"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Activities",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Activities"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 59450625,\n    \"title\": \"cupidatat commodo culpa\",\n    \"dueDate\": \"1957-11-02T09:26:13.433Z\",\n    \"completed\": true\n  },\n  {\n    \"id\": -95710969,\n    \"title\": \"incididunt dolore Lorem aute\",\n    \"dueDate\": \"1965-06-01T22:43:54.917Z\",\n    \"completed\": true\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Activities",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"//validações do corpo da resposta\r",
+											"pm.test(\"O response da requisição foi validado.\", () => {\r",
+											"//criação de constante para fazer o parse do JSON\r",
+											"  const respostaDoJson = pm.response.json();\r",
+											" \r",
+											"//teste que valida o conteúdo de uma variável\r",
+											" pm.expect(respostaDoJson.id).to.eql(0);\r",
+											"//teste que valida o tipo de uma variável\r",
+											"  pm.expect(respostaDoJson.id).to.be.a(\"number\");\r",
+											"  pm.expect(respostaDoJson.id).to.eql(0);\r",
+											"  pm.expect(respostaDoJson.title).to.be.a(\"string\");\r",
+											"  pm.expect(respostaDoJson.title).to.eql(\"string\");\r",
+											"//teste que valida a quantidade de caracteres no conteúdo de uma variável\r",
+											" pm.expect(respostaDoJson.title).to.have.lengthOf(6);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; v=1.0"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 0,\n  \"title\": \"string\",\n  \"dueDate\": \"2023-01-28T17:03:56.866Z\",\n  \"completed\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Activities",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Activities"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 33103427,\n  \"title\": \"repre\",\n  \"dueDate\": \"2009-05-14T16:32:17.279Z\",\n  \"completed\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Activities",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Activities"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 33103427,\n  \"title\": \"repre\",\n  \"dueDate\": \"2009-05-14T16:32:17.279Z\",\n  \"completed\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Authors",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/v1/Authors/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain; v=1.0"
+											}
+										],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Authors/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Authors",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Authors/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Authors",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; v=1.0"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 36447288,\n  \"idBook\": -98643207,\n  \"firstName\": \"ea\",\n  \"lastName\": \"cillum culpa\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/v1/Authors/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json; v=1.0"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain; v=1.0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 36447288,\n  \"idBook\": -98643207,\n  \"firstName\": \"ea\",\n  \"lastName\": \"cillum culpa\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Authors/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Authors",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 36447288,\n  \"idBook\": -98643207,\n  \"firstName\": \"ea\",\n  \"lastName\": \"cillum culpa\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Authors/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Authors",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; v=1.0"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 36447288,\n  \"idBook\": -98643207,\n  \"firstName\": \"ea\",\n  \"lastName\": \"cillum culpa\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/v1/Authors/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Authors/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Authors",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Authors/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Authors",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Authors",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Authors",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Authors"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Authors",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Authors"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 75504203,\n    \"idBook\": -82958507,\n    \"firstName\": \"dolor reprehenderit\",\n    \"lastName\": \"eiusmod officia\"\n  },\n  {\n    \"id\": 96778530,\n    \"idBook\": 68770094,\n    \"firstName\": \"tempor id sit est Duis\",\n    \"lastName\": \"esse amet Duis\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Authors",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											"\r",
+											"//validações do corpo da resposta\r",
+											"pm.test(\"O response da requisição foi validado.\", () => {\r",
+											"//criação de constante para fazer o parse do JSON\r",
+											"  const respostaDoJson = pm.response.json();\r",
+											" \r",
+											"//teste que valida o conteúdo de uma variável\r",
+											" pm.expect(respostaDoJson.id).to.eql(36447288);\r",
+											"//teste que valida o tipo de uma variável\r",
+											"  pm.expect(respostaDoJson.id).to.be.a(\"number\");\r",
+											"  pm.expect(respostaDoJson.id).to.eql(36447288);\r",
+											"  pm.expect(respostaDoJson.firstName).to.be.a(\"String\");\r",
+											"  pm.expect(respostaDoJson.lastName).to.eql(\"cillum culpa\");\r",
+											"//teste que valida a quantidade de caracteres no conteúdo de uma variável\r",
+											" pm.expect(respostaDoJson.firstName).to.have.lengthOf(2);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; v=1.0"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 36447288,\n  \"idBook\": -98643207,\n  \"firstName\": \"ea\",\n  \"lastName\": \"cillum culpa\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Authors",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Authors"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 36447288,\n  \"idBook\": -98643207,\n  \"firstName\": \"ea\",\n  \"lastName\": \"cillum culpa\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Authors",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Authors"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 36447288,\n  \"idBook\": -98643207,\n  \"firstName\": \"ea\",\n  \"lastName\": \"cillum culpa\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Authors/authors/books/:idBook",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Authors/authors/books/1",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Authors",
+										"authors",
+										"books",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Authors/authors/books/:idBook",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Authors",
+												"authors",
+												"books",
+												":idBook"
+											],
+											"variable": [
+												{
+													"key": "idBook",
+													"value": "90502952",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 75504203,\n    \"idBook\": -82958507,\n    \"firstName\": \"dolor reprehenderit\",\n    \"lastName\": \"eiusmod officia\"\n  },\n  {\n    \"id\": 96778530,\n    \"idBook\": 68770094,\n    \"firstName\": \"tempor id sit est Duis\",\n    \"lastName\": \"esse amet Duis\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Books",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/v1/Books/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain; v=1.0"
+											}
+										],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Books/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Books",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Books/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Books",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; v=1.0"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": -97130611,\n  \"title\": \"non esse\",\n  \"description\": \"Duis mollit occaecat\",\n  \"pageCount\": -73618409,\n  \"excerpt\": \"dolore ut\",\n  \"publishDate\": \"2017-09-26T19:12:54.836Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/v1/Books/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json; v=1.0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -97130611,\n  \"title\": \"non esse\",\n  \"description\": \"Duis mollit occaecat\",\n  \"pageCount\": -73618409,\n  \"excerpt\": \"dolore ut\",\n  \"publishDate\": \"2017-09-26T19:12:54.836Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Books/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Books",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": -97130611,\n  \"title\": \"non esse\",\n  \"description\": \"Duis mollit occaecat\",\n  \"pageCount\": -73618409,\n  \"excerpt\": \"dolore ut\",\n  \"publishDate\": \"2017-09-26T19:12:54.836Z\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Books/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Books",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/v1/Books/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Books/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Books",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Books/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Books",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Books",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Books",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Books"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Books",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Books"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 55458342,\n    \"title\": \"est et non\",\n    \"description\": \"quis\",\n    \"pageCount\": -14975530,\n    \"excerpt\": \"ullamco est Excepteur\",\n    \"publishDate\": \"2000-07-18T02:43:54.131Z\"\n  },\n  {\n    \"id\": -45217833,\n    \"title\": \"magna anim adipisicing Excepteur nisi\",\n    \"description\": \"cupidatat laboris nostrud sunt\",\n    \"pageCount\": -99944012,\n    \"excerpt\": \"labore do\",\n    \"publishDate\": \"1943-12-25T00:42:25.657Z\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Books",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											"\r",
+											"//validações do corpo da resposta\r",
+											"pm.test(\"O response da requisição foi validado.\", () => {\r",
+											"//criação de constante para fazer o parse do JSON\r",
+											"  const respostaDoJson = pm.response.json();\r",
+											" \r",
+											"//teste que valida o conteúdo de uma variável\r",
+											" pm.expect(respostaDoJson.id).to.eql(-97130611);\r",
+											"//teste que valida o tipo de uma variável\r",
+											"  pm.expect(respostaDoJson.id).to.be.a(\"number\");\r",
+											"  pm.expect(respostaDoJson.id).to.eql(-97130611);\r",
+											"  pm.expect(respostaDoJson.description).to.be.a(\"String\");\r",
+											"  pm.expect(respostaDoJson.title).to.eql(\"non esse\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; v=1.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -97130611,\n  \"title\": \"non esse\",\n  \"description\": \"Duis mollit occaecat\",\n  \"pageCount\": -73618409,\n  \"excerpt\": \"dolore ut\",\n  \"publishDate\": \"2017-09-26T19:12:54.836Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Books",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Books"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -97130611,\n  \"title\": \"non esse\",\n  \"description\": \"Duis mollit occaecat\",\n  \"pageCount\": -73618409,\n  \"excerpt\": \"dolore ut\",\n  \"publishDate\": \"2017-09-26T19:12:54.836Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Books",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Books"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "CoverPhotos",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/v1/CoverPhotos/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain; v=1.0"
+											}
+										],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/CoverPhotos/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"CoverPhotos",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/CoverPhotos/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"CoverPhotos",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; v=1.0"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 2531691,\n  \"idBook\": 49848056,\n  \"url\": \"http://PUzzW.lulFNcxZTsA1ReSRwux9-t.WdghALV\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/v1/CoverPhotos/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json; v=1.0"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain; v=1.0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 2531691,\n  \"idBook\": 49848056,\n  \"url\": \"http://PUzzW.lulFNcxZTsA1ReSRwux9-t.WdghALV\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/v1/CoverPhotos/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"CoverPhotos",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 2531691,\n  \"idBook\": 49848056,\n  \"url\": \"http://PUzzW.lulFNcxZTsA1ReSRwux9-t.WdghALV\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/CoverPhotos/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"CoverPhotos",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; v=1.0"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 2531691,\n  \"idBook\": 49848056,\n  \"url\": \"http://PUzzW.lulFNcxZTsA1ReSRwux9-t.WdghALV\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/v1/CoverPhotos/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/CoverPhotos/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"CoverPhotos",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/CoverPhotos/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"CoverPhotos",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/v1/CoverPhotos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/CoverPhotos",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"CoverPhotos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/CoverPhotos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"CoverPhotos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 59973203,\n    \"idBook\": 19539132,\n    \"url\": \"http://nLStNbwmBUZjTIWJufNEpqyYj.amkytLy0Tdo8AlxwvcxM\"\n  },\n  {\n    \"id\": 4841167,\n    \"idBook\": 39767820,\n    \"url\": \"https://SnsRX.pqlyBIXyZzuOxqsCN4dNUMBl.Rf2dVSry+ORgZm.ari1x5NY0Q6d\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/v1/CoverPhotos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											"\r",
+											"//validações do corpo da resposta\r",
+											"pm.test(\"O response da requisição foi validado.\", () => {\r",
+											"//criação de constante para fazer o parse do JSON\r",
+											"  const respostaDoJson = pm.response.json();\r",
+											" \r",
+											"//teste que valida o conteúdo de uma variável\r",
+											" pm.expect(respostaDoJson.id).to.eql(2531691);\r",
+											"//teste que valida o tipo de uma variável\r",
+											"  pm.expect(respostaDoJson.id).to.be.a(\"number\");\r",
+											"  pm.expect(respostaDoJson.idBook).to.eql(49848056);\r",
+											"  pm.expect(respostaDoJson.url).to.be.a(\"String\");\r",
+											"  \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; v=1.0"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 2531691,\n  \"idBook\": 49848056,\n  \"url\": \"http://PUzzW.lulFNcxZTsA1ReSRwux9-t.WdghALV\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/CoverPhotos",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"CoverPhotos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 2531691,\n  \"idBook\": 49848056,\n  \"url\": \"http://PUzzW.lulFNcxZTsA1ReSRwux9-t.WdghALV\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/CoverPhotos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"CoverPhotos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 2531691,\n  \"idBook\": 49848056,\n  \"url\": \"http://PUzzW.lulFNcxZTsA1ReSRwux9-t.WdghALV\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/api/v1/CoverPhotos/books/covers/:idBook",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/CoverPhotos/books/covers/1",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"CoverPhotos",
+										"books",
+										"covers",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/CoverPhotos/books/covers/:idBook",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"CoverPhotos",
+												"books",
+												"covers",
+												":idBook"
+											],
+											"variable": [
+												{
+													"key": "idBook",
+													"value": "90502952",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": 59973203,\n    \"idBook\": 19539132,\n    \"url\": \"http://nLStNbwmBUZjTIWJufNEpqyYj.amkytLy0Tdo8AlxwvcxM\"\n  },\n  {\n    \"id\": 4841167,\n    \"idBook\": 39767820,\n    \"url\": \"https://SnsRX.pqlyBIXyZzuOxqsCN4dNUMBl.Rf2dVSry+ORgZm.ari1x5NY0Q6d\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/v1/Users/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Users/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Users",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/v1/Users/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"  //validações dos cabeçalhos da requisição\r",
+													"      //Teste para verificar a existência de um cabeçalho.\r",
+													"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+													"pm.response.to.have.header(\"Content-Type\");\r",
+													"});\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json; v=1.0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -17550486,\n  \"userName\": \"sed aute ut\",\n  \"password\": \"Duis enim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Users/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Users",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": -17550486,\n  \"userName\": \"sed aute ut\",\n  \"password\": \"Duis enim\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/v1/Users/:id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"\r",
+													" //validações do status code\r",
+													"      //Teste de validação de status code\r",
+													"pm.test(\"Status code é 200\", function () {\r",
+													"pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"      //Teste de resposta em texto do status code\r",
+													"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+													"pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"\r",
+													"\r",
+													"\r",
+													"  //Validação de desempenho\r",
+													"      //teste de tempo de resposta\r",
+													"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+													"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/api/v1/Users/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Users",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/Users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"Users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "90502952",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Users",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain; v=1.0"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Users",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; v=1.0"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": -79161067,\n    \"userName\": \"aliquip dolore Excepteur velit\",\n    \"password\": \"laborum\"\n  },\n  {\n    \"id\": -46450882,\n    \"userName\": \"tempor fugiat id consectetur\",\n    \"password\": \"dolor magna aliquip occaecat\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/v1/Users",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											" //validações do status code\r",
+											"      //Teste de validação de status code\r",
+											"pm.test(\"Status code é 200\", function () {\r",
+											"pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"      //Teste de resposta em texto do status code\r",
+											"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+											"pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"\r",
+											"  //validações dos cabeçalhos da requisição\r",
+											"      //Teste para verificar a existência de um cabeçalho.\r",
+											"pm.test(\"Content-type está presente nos cabeçalhos\", () => {\r",
+											"pm.response.to.have.header(\"Content-Type\");\r",
+											"});\r",
+											"\r",
+											"  //Validação de desempenho\r",
+											"      //teste de tempo de resposta\r",
+											"pm.test(\"O tempo de resposta é menor que 250ms\", () => {\r",
+											"pm.expect(pm.response.responseTime).to.be.below(250);\r",
+											"});\r",
+											"\r",
+											"//validações do corpo da resposta\r",
+											"pm.test(\"O response da requisição foi validado.\", () => {\r",
+											"//criação de constante para fazer o parse do JSON\r",
+											"  const respostaDoJson = pm.response.json();\r",
+											" \r",
+											"//teste que valida o conteúdo de uma variável\r",
+											" pm.expect(respostaDoJson.id).to.eql(-17550486);\r",
+											"//teste que valida o tipo de uma variável\r",
+											"  pm.expect(respostaDoJson.id).to.be.a(\"number\");\r",
+											"  pm.expect(respostaDoJson.id).to.eql(-17550486);\r",
+											"  pm.expect(respostaDoJson.userName).to.be.a(\"String\");\r",
+											"  pm.expect(respostaDoJson.password).to.be.a(\"String\");\r",
+											"  pm.expect(respostaDoJson.userName).to.eql(\"sed aute ut\");\r",
+											"  pm.expect(respostaDoJson.password).to.eql(\"Duis enim\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; v=1.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -17550486,\n  \"userName\": \"sed aute ut\",\n  \"password\": \"Duis enim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/Users",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -17550486,\n  \"userName\": \"sed aute ut\",\n  \"password\": \"Duis enim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/Users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"Users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
